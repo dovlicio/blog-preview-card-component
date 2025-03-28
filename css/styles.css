@@ -1,0 +1,117 @@
+:root {
+    --color-yellow: #f4d04e;
+    --color-grey-950: #111;
+    --color-grey-500: #6b6b6b;
+    --color-white: #fff;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    --spacing-300: 2.4rem;
+    --spacing-150: 1.2rem;
+    --spacing-100: 0.8rem;
+    --spacing-50: 0.4rem;
+    align-items: center;
+    background: var(--color-yellow);
+    display: flex;
+    font-family: 'Figtree', sans-serif;
+    font-size: 1.4rem;
+    height: 100vh;
+    justify-content: center;
+    letter-spacing: 0;
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 1.6rem;
+    }
+}
+
+.card {
+    background: var(--color-white);
+    border-radius: var(--spacing-300);
+    border: 1px solid var(--color-grey-950);
+    box-shadow: 10px 10px var(--color-grey-950);
+    margin: auto var(--spacing-150);
+    max-width: 380px;
+    padding: 2rem;
+}
+
+.card__image-container {
+    border-radius: var(--spacing-150);
+    height: fit-content;
+    margin: 0 0 var(--spacing-300) 0;
+    overflow: hidden;
+    width: auto;
+}
+
+.card__image {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card__badge {
+    background: var(--color-yellow);
+    border-radius: var(--spacing-50);
+    display: inline-block;
+    font-weight: 800;
+    padding: var(--spacing-50) var(--spacing-150);
+}
+
+.card__info {
+    margin: var(--spacing-100) 0 0;
+}
+
+.card__link {
+    text-decoration: none;
+}
+
+.card__heading {
+    font-size: 2rem;
+    margin: var(--spacing-150) 0 var(--spacing-100);
+    color: var(--color-grey-950);
+}
+
+.card__heading:hover {
+    color: var(--color-yellow);
+}
+
+@media screen and (min-width: 1024px) {
+    .card__heading {
+        font-size: 2.4rem;
+    }
+}
+
+.card__text {
+    margin-top: 0;
+    font-weight: 500;
+    color: var(--color-grey-500);
+}
+
+.card__footer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.card__author-image {
+    height: 40px;
+    width: 40px;
+}
+
+.card__author-name {
+    padding-left: var(--spacing-150);
+    font-weight: 800;
+}
